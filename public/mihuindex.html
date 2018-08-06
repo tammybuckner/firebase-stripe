@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Firebase Stripe Example</title>
+    <title>MIHU Membership</title>
 </head>
 <body>
 
@@ -16,12 +16,12 @@
             <div id="card-element">
                 <!-- Stripe card inputs get injected here -->
             </div>
-            <button type="submit">Donate $5 USD</button>
+            <button type="submit">Donate $10 USD</button>
             <div id="error" style="color: #e25950;"></div>
         </form>
 
         <div id="processing" style="display: none;">processing...</div>
-        <div id="thanks" style="display: none;">Thanks for your donation!</div>
+        <div id="thanks" style="display: none;">Thanks for your membership!</div>
     </div>
 
     <!-- This script used for the Payment Request and Card Element methods -->
@@ -31,10 +31,10 @@
     <script src="https://checkout.stripe.com/checkout.js"></script>
 
     <script>
-        const STRIPE_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // TODO: PUT YOUR STRIPE PUBLISHABLE KEY HERE
+        const STRIPE_PUBLIC_KEY = 'pk_live_5VXJxY82iSNUVymtdnwUo4vb'; // TODO: PUT YOUR STRIPE PUBLISHABLE KEY HERE
         const FIREBASE_FUNCTION = 'https://[YOUR_FIREBASE_PROJECT].cloudfunctions.net/charge/'; // TODO: PUT YOUR FIREBASE FUNCTIONS URL HERE
 
-        const stripe = Stripe(STRIPE_PUBLIC_KEY);
+        const stripe = Stripe(sk_live_jYBjfrnkQk23bcxyH0AVr3ZA);
         const elements = stripe.elements();
 
         const charge_amount = 500;
